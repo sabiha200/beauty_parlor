@@ -1,0 +1,109 @@
+/* -------navbar part start----------*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+.logo{
+    width:60px;
+height:60px;
+}
+.main_menu{
+    background: #f9dfdf7c;
+    backdrop-filter: blur(8px);             
+  -webkit-backdrop-filter: blur(8px); 
+  font-family: "PT Sans", sans-serif;   
+}
+.nav_items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+ 
+
+}
+.nav_items li a{
+    color:#57595B !important;
+    font-size: 17px;
+    
+}
+
+.nav_items li:hover  a{
+     background: linear-gradient(
+    135deg,
+    #ffe6f2,
+    #f3e8ff
+  );
+  color: #7b3fa1 !important;
+  border-radius: 30px;
+  padding: 8px 18px !important;
+   transition: all 0.35s ease-in-out; 
+}
+
+/* From Uiverse.io by Wendell47 */ 
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background: rgb(193, 228, 248);
+  color: rgb(33, 0, 85);
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 0, 75, 1) 0%,
+    rgba(191, 70, 255, 1) 49%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------navbar part end------------ */
