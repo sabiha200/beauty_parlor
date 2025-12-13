@@ -122,7 +122,6 @@
   display: flex;
   flex-wrap: wrap;
   gap:30px;
-  align-items: center;
 }
 
 
@@ -258,7 +257,41 @@
 /* Section */
 .team-section {
   padding: 80px 16px;
+  
 }
+.teamslide{
+  position: relative;
+}
+.team-section  .prevcarosuel{
+
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #a776dc;
+   position: absolute;
+   top: 34%;
+   transform: translateY(-50%);
+   left: -6%;
+}
+.team-section  .prevcarosuel .previcon{
+  font-size: 20px;
+}
+
+.team-section  .nextcarosuel{
+  
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #a776dc;
+     position: absolute;
+   top: 34%;
+   transform: translateY(-50%);
+   right: -6%;
+}
+.team-section  .prevcarosuel .nxticon{
+  font-size: 20px;
+}
+
 
 /* Header */
 .section-header {
@@ -282,20 +315,32 @@
 }
 
 /* Grid */
-.team-grid {
-  display: grid;
-  gap: 32px;
-}
 
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 
 /* Card */
 .team-card {
   text-align: center;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #9333ea;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) invert(1);
 }
 
 /* Image wrapper */
@@ -304,6 +349,10 @@
   overflow: hidden;
   border-radius: 24px;
   margin-bottom: 24px;
+}
+
+.Previous{
+  background-color: yellowgreen;
 }
 
 /* Image */
