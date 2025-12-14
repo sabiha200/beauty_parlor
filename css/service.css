@@ -317,11 +317,15 @@
 /* Grid */
 
 
-/* @media (min-width: 768px) {
+ @media (min-width: 768px) {
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-} */
+} 
+
+.mentor .slick-slide {
+  margin: 0 15px;   /* gap between slides */
+}
 
 /* Card */
 .team-card {
