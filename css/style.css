@@ -1,4 +1,275 @@
-.mission {
-    flex-direction: row;
+:root {
+    --theme-color: #9333ea;
+}
 
+body {
+    background-color: #f6f2fc;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+.bg {
+  background: linear-gradient(180deg, #fff7fb, #ffffff);
+}
+
+/* Section header */
+.section-label {
+  color: #c084fc;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.section-desc {
+  max-width: 600px;
+  color: #6b7280;
+}
+
+/* Image card */
+.image-card {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Mission card (right side) */
+.mission-card {
+  background: #fff5fb;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.mission-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.mission-text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 30px;
+}
+
+/* Pills */
+.pill-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pill {
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f3e8ff, #fde2e4);
+  color: #7c3aed;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+}
+
+
+
+body {
+    background-color: #fff7fb;
+}
+
+/* Section background */
+.stats-section {
+    background: linear-gradient(180deg, #fff7fb, #ffffff);
+}
+
+/* Card styling */
+.stat-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon box */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+}
+
+.icon-box i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* Text */
+.stat-card h3 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Smooth transition for icon */
+.icon-box {
+    transition: transform 0.3s ease;
+}
+
+/* Rotate icon slightly when card is hovered */
+.stat-card:hover .icon-box {
+    transform: rotate(8deg);
+}
+
+
+/* Section background */
+.team-section {
+  background: #fff7fb;
+}
+
+/* Header */
+.team-subtitle {
+  color: #d946ef;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.team-desc {
+  max-width: 650px;
+  margin: auto;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+/* Card */
+.team-card {
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.team-img {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.team-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* Name & role */
+.team-card h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.team-card span {
+  color: #9333ea;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.success-section {
+    padding: 80px 0;
+}
+
+.success-title {
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--theme-color);
+}
+
+.success-subtitle {
+    color: #6c757d;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+.story-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    height: 100%;
+    border: 1px solid rgba(147, 51, 234, 0.15);
+    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.08);
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(147, 51, 234, 0.15);
+}
+
+.stars {
+    color: var(--theme-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.story-text {
+    font-style: italic;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.story-author {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--theme-color);
+}
+
+.story-course {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+hr {
+    border-color: rgba(147, 51, 234, 0.2);
+}
+
+@media (max-width: 768px) {
+    .success-title {
+        font-size: 32px;
+    }
 }
