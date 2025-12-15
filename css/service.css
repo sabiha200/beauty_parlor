@@ -325,51 +325,136 @@
 
 .mentor .slick-slide {
   margin: 0 15px;   /* gap between slides */
+  position: relative;
+}
+.mentor  .leftarr{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #d8b4fe;
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+   font-size: 24px;
+   color: white;
+   border: none;
+   position: absolute;
+   top: 44%;
+   transform: translateY(-50%);
+   z-index: 1;
+   left: -5%;
+
+
+}
+
+.mentor  .rightarr{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #d8b4fe;
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+   font-size: 24px;
+   color: white;
+   border: none;
+   position: absolute;
+   top: 44%;
+   transform: translateY(-50%);
+   z-index: 2;
+   right: -5%;
+
 }
 
 /* Card */
 .team-card {
-  text-align: center;
-}
-.carousel-control-prev,
-.carousel-control-next {
-  width: 48px;
-  height: 48px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #9333ea;
-  border-radius: 50%;
-  opacity: 1;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: brightness(0) invert(1);
+.team-card:hover {
+  transform: translateY(-6px);
+  
 }
 
-/* Image wrapper */
+.course-info {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+.course-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.course-desc {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+/* Meta Info */
+.course-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #e91e63;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Learn Section */
+.course-learn h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.course-learn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-learn li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.course-learn li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+
+/* Image Section */
 .image-wrapper {
   position: relative;
+  height: 240px;
   overflow: hidden;
-  border-radius: 24px;
-  margin-bottom: 24px;
 }
 
-.Previous{
-  background-color: yellowgreen;
-}
-
-/* Image */
 .profile-img {
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-/* Hover zoom */
-.team-card:hover .profile-img {
-  transform: scale(1.1);
 }
 
 /* Overlay */
@@ -377,83 +462,146 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(147, 51, 234, 0.85),
-    transparent
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.6)
   );
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 1;
 }
 
 .team-card:hover .image-overlay {
   opacity: 1;
 }
 
-/* Hover content */
+/* Hover Content */
 .hover-content {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px;
-  color: white;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-  z-index: 2;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
 
 .team-card:hover .hover-content {
+  opacity: 1;
   transform: translateY(0);
 }
 
-.hover-content p {
+/* Badge (top-right like price tag) */
+.price-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #c84aa6;
+  color: #fff;
   font-size: 14px;
-  margin-bottom: 16px;
-  opacity: 0.9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
 }
 
-/* Social links */
-.social-links {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  color:#1f2937;
-   background: #e594cb33;
-     font-size: 14px;
-  text-decoration: none;
-  padding: 6px 6px;
-  border-radius: 999px;
-  width: 120px;
-  margin: 0 auto;
-  transition: background 0.3s ease;
+/* Card Body */
+.card-body {
+  padding: 30px !important;
+  text-align: center;
 }
 
-.social-links a {
-  color: white;
-
+/* Name */
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
-.social-links a:hover {
-  background: rgba(255, 255, 255, 0.35);
-}
-
-/* Text info */
-.team-card h3 {
-  color: #1f2937;
-  margin-bottom: 8px;
-}
-
-.role {
-  color: #9333ea;
-  font-weight: 500;
+/* Role */
+.card-body .role {
+  font-size: 14px;
+  color: #e91e63;
   margin-bottom: 4px;
 }
 
-.experience {
-  color: #6b7280;
-  font-size: 14px;
+/* Experience */
+.card-body .experience {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 12px;
 }
+
+/* Extra Info */
+.extra-info {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #e91e63;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.extra-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Course Details */
+.course-details {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.course-details h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.course-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-details li {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 6px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.course-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-links i {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-links i:hover {
+  color: #e91e63;
+}
+
+
 
 /* mentor css end */
 

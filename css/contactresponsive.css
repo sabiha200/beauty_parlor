@@ -1,7 +1,13 @@
 /* extra small device start */
 
 @media (min-width:320px) and (max-width: 575.98px) { 
+  .form-wrapper {
 
+	width: 92%;
+}
+.visit {
+	width: 92%;
+}
 
 }
 /* extra small device end */
