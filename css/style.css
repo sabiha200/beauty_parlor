@@ -1635,3 +1635,58 @@ background: linear-gradient(135deg, #ff758c, #ff7eb3) !important;
         font-size: 18px;
     }
 }
+
+/* Card styling */
+.stat-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Icon box */
+.icon-box {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+}
+
+.icon-box i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+/* Rotate icon slightly when card is hovered */
+.stat-card:hover .icon-box {
+    transform: rotate(8deg);
+}
+
+/* Smooth transition for icon */
+.icon-box {
+    transition: transform 0.3s ease;
+}
+
+/* Text */
+.stat-card h3 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #6b7280;
+    font-size: 16px;
+    margin: 0;
+}
