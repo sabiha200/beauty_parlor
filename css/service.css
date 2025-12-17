@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+  --main-font:"Roboto", sans-serif;
+}
+.services{
+    background-image:linear-gradient(to bottom right, #fff1f2, #f5f3ff, #fdf2f8);
+  
+    
+}
+
+.service_row{
+    padding: 80px 0px;
+    
+}
+
+/* offer row css start */
+.offer{
+    background-image: linear-gradient(to right, #f3e8ff, #f5e5e5);
+    width: 170px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    
+}
+.offer .text ,.spkle{
+    color: #805ad5;
+    font-family: var(--main-font)
+}
+
+/* offer row css start */
+
+/* service row css heading start */
+
+.service_row .heading .h1{
+     background: linear-gradient(to right, #9333ea, #f43f5e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+    text-align: center;
+    margin-top: 24px;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+
+}
+.service_row .heading .para{
+    text-align: center;
+    margin-top:24px;
+    color: #718096;
+    font-size: 16px;
+}
+.service_row .heading .paratext{
+    display: block;
+    text-align: center;
+}
+
+/* service row css heading start */
+
+/* category card css start */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
+/* Button base */
+.category-btn {
+  padding: 12px 24px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border: 1px solid #f3e8ff;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover state */
+.category-btn:hover {
+  background: linear-gradient(90deg, #ede9fe, #ffe4e6);
+  color: #9333ea;
+}
+
+/* Active state */
+.category-btn.active {
+  background: linear-gradient(90deg, #9333ea, #ec4899);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
+  border: none;
+}
+
+/* Text wrapper */
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+/* category card css end */
+
+/* course card start */
+/* Grid layout */
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap:30px;
+}
+
+
+/* Card */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid #ede9fe;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  border-color: #d8b4fe;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+}
+
+/* Decorative background shape */
+.card-bg-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 128px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(168, 85, 247, 0.2),
+    rgba(244, 63, 94, 0.2)
+  );
+  border-bottom-left-radius: 100%;
+  transform: translate(32px, -32px);
+  transition: transform 0.5s ease, scale 0.5s ease;
+}
+
+.service-card:hover .card-bg-shape {
+  transform: translate(32px, -32px) scale(1.5);
+}
+
+/* Content */
+.card-content {
+  position: relative;
+  padding: 32px;
+}
+
+/* Icon */
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom right, #a855f7, #f43f5e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .icon-wrapper {
+  transform: scale(1.1) rotate(12deg);
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* Text */
+.card-content h3 {
+  color: #1f2937;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.card-content p {
+  color: #4b5563;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Info rows */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.info-row span:first-child {
+  color: #6b7280;
+}
+
+.highlight {
+  color: #9333ea;
+}
+
+.price {
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Button */
+.book-btn {
+  width: 200px;
+  padding: 12px;
+  border-radius: 999px;
+  margin-top: 10px;
+  border: none;
+  background: linear-gradient(to right, #ede9fe, #ffe4e6);
+  color: #9333ea;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .book-btn {
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
+}
+
+
+/* course card end */
+
+/* mentor css start */
+/* Section */
+.team-section {
+  padding: 80px 16px;
+  
+}
+.teamslide{
+  position: relative;
+}
+.team-section  .prevcarosuel{
+
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #a776dc;
+   position: absolute;
+   top: 34%;
+   transform: translateY(-50%);
+   left: -6%;
+}
+.team-section  .prevcarosuel .previcon{
+  font-size: 20px;
+}
+
+.team-section  .nextcarosuel{
+  
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #a776dc;
+     position: absolute;
+   top: 34%;
+   transform: translateY(-50%);
+   right: -6%;
+}
+.team-section  .prevcarosuel .nxticon{
+  font-size: 20px;
+}
+
+
+/* Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-header p {
+  color: #4b5563;
+  max-width: 640px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* Grid */
+
+
+ @media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 
+
+.mentor .slick-slide {
+  margin: 0 15px;   /* gap between slides */
+  position: relative;
+}
+.mentor  .leftarr{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #d8b4fe;
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+   font-size: 24px;
+   color: white;
+   border: none;
+   position: absolute;
+   top: 44%;
+   transform: translateY(-50%);
+   z-index: 1;
+   left: -5%;
+
+
+}
+
+.mentor  .rightarr{
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: #d8b4fe;
+   display: flex;
+   justify-content:center ;
+   align-items: center;
+   font-size: 24px;
+   color: white;
+   border: none;
+   position: absolute;
+   top: 44%;
+   transform: translateY(-50%);
+   z-index: 2;
+   right: -5%;
+
+}
+
+/* Card */
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  
+}
+
+.course-info {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: Arial, sans-serif;
+}
+
+.course-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.course-desc {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+/* Meta Info */
+.course-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #e91e63;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Learn Section */
+.course-learn h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.course-learn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-learn li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.course-learn li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+
+/* Image Section */
+.image-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.6)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Hover Content */
+.hover-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .hover-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Badge (top-right like price tag) */
+.price-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #c84aa6;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* Card Body */
+.card-body {
+  padding: 30px !important;
+  text-align: center;
+}
+
+/* Name */
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Role */
+.card-body .role {
+  font-size: 14px;
+  color: #e91e63;
+  margin-bottom: 4px;
+}
+
+/* Experience */
+.card-body .experience {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* Extra Info */
+.extra-info {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #e91e63;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.extra-info span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Course Details */
+.course-details {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.course-details h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.course-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-details li {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 6px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.course-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.social-links i {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-links i:hover {
+  color: #e91e63;
+}
+
+
+
+/* mentor css end */
+
+/* specail offer start */
+/* Section */
+.offers-section {
+  margin-top: 80px;
+}
+
+/* Header */
+.offers-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.offers-header h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.offers-header p {
+  color: #4b5563;
+}
+
+/* Grid */
+.offers-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+
+/* Card */
+.offer-card {
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+  padding: 20px 20px;
+  border-radius: 24px;
+  background: linear-gradient(to bottom right, #faf5ff, #fff1f2);
+  border: 2px solid #e9d5ff;
+  transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+  border-color: #c084fc;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Badge */
+.offer-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 24px;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: white;
+  font-weight: 600;
+  border-bottom-left-radius: 24px;
+}
+
+/* Content */
+.offer-content {
+  padding: 32px;
+  padding-top: 64px;
+}
+
+/* Title */
+.offer-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.offer-title h3 {
+  color: #1f2937;
+  font-size: 20px;
+}
+
+/* Icon */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, #a855f7, #f43f5e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.offer-card:hover .icon-box {
+  transform: scale(1.1) rotate(12deg);
+}
+
+/* Text */
+.offer-desc {
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+/* List */
+.offer-list {
+  margin-bottom: 24px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.offer-list li {
+  color: #4b5563;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Validity */
+.offer-validity {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Button */
+.offer-btn {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(to right, #9333ea, #ec4899);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offer-btn:hover {
+  box-shadow: 0 15px 30px rgba(147, 51, 234, 0.35);
+  transform: scale(1.05);
+}
+
+/* special offer end */
