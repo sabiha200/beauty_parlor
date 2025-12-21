@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(to bottom, rgba(245, 243, 255, 0.5), white);
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.hero p {
+  color: rgba(243, 232, 255, 1);
+  max-width: 672px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.category-section {
+  margin-top: -32px;
+  margin-bottom: 64px;
+}
+
+.category-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.category-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.category-tabs::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+.category-btn {
+  padding: 12px 24px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.category-btn.active {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.category-btn:not(.active) {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.category-btn:not(.active):hover {
+  background: #e5e7eb;
+}
+
+.content-section {
+  padding: 64px 0;
+}
+
+.tutorial-count {
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.tutorials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .tutorials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tutorials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tutorial-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.tutorial-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  height: 224px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.tutorial-card:hover .thumbnail {
+  transform: scale(1.1);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tutorial-card:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-button {
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  width: 32px;
+  height: 32px;
+  color: #ec4899;
+  margin-left: 4px;
+}
+
+.duration-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.difficulty-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: white;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 12px;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+.tutorial-card:hover h3 {
+  color: #a855f7;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meta-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-button {
+  padding: 8px;
+  border: none;
+  background: transparent;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon-button:hover {
+  background: rgba(236, 72, 153, 0.1);
+}
+
+.icon-button.bookmark:hover {
+  background: rgba(168, 85, 247, 0.1);
+}
+
+.icon-button svg {
+  width: 20px;
+  height: 20px;
+  color: #9ca3af;
+  transition: color 0.3s;
+}
+.view a{
+    text-decoration: none;
+}
+.icon-button:hover svg {
+  color: #ec4899;
+}
+
+.icon-button.bookmark:hover svg {
+  color: #a855f7;
+}
+
+.icon-button.saved svg {
+  color: #a855f7;
+  fill: #a855f7;
+}
